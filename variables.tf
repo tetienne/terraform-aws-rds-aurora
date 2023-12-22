@@ -90,12 +90,6 @@ variable "backtrack_window" {
   default     = null
 }
 
-variable "cluster_members" {
-  description = "List of RDS Instances that are a part of this cluster"
-  type        = list(string)
-  default     = null
-}
-
 variable "copy_tags_to_snapshot" {
   description = "Copy all Cluster `tags` to snapshots"
   type        = bool

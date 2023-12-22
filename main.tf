@@ -47,7 +47,6 @@ resource "aws_rds_cluster" "this" {
   backtrack_window                    = local.backtrack_window
   cluster_identifier                  = var.cluster_use_name_prefix ? null : var.name
   cluster_identifier_prefix           = var.cluster_use_name_prefix ? "${var.name}-" : null
-  cluster_members                     = var.cluster_members
   copy_tags_to_snapshot               = var.copy_tags_to_snapshot
   database_name                       = var.is_primary_cluster ? var.database_name : null
   db_cluster_instance_class           = var.db_cluster_instance_class
